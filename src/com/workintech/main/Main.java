@@ -1,11 +1,18 @@
-package com.workintech.pacificCar.main;
+package com.workintech.main;
 
 import com.workintech.pacificCar.Car;
 import com.workintech.pacificCar.Ford;
 import com.workintech.pacificCar.Holden;
 import com.workintech.pacificCar.Mitsubishi;
+import com.workintech.rdcompany.CarSkeleton;
+import com.workintech.rdcompany.HybridCar;
 
 public class Main {
+
+    public static void isDrive(CarSkeleton carSkeleton){
+        carSkeleton.startEngine();
+        carSkeleton.drive();
+    }
     public static void main(String[] args) {
         Car car = new Car(8, "Base car");
 
@@ -38,5 +45,9 @@ public class Main {
         holden.accelerate();
 
         holden.brake();
+
+        System.out.println("****************");
+
+       isDrive(new HybridCar("hybrid car","car has hybrid enginee",40));
     }
 }
