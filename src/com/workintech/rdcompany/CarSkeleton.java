@@ -15,13 +15,13 @@ public class CarSkeleton {
         return true;
     }
 
-    protected void runEngine() {
-        System.out.println("car's enginee is running");
+    protected void runEngine(CarSkeleton car) {
+        System.out.println(car.name + "'s enginee is running");
     }
 
-    public void drive() {
+    public void drive(CarSkeleton car) {
         if (startEngine()) {
-            runEngine();
+            runEngine(car);
             System.out.println("car can be driven");
         } else {
             System.out.println("car can not be driven");
